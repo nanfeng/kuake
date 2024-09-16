@@ -1,9 +1,13 @@
-var pwd_id = 'b89863b3ed3d';
+/**
+ * 打开控制台，下载视频，记录以下参数
+ */
+var pwd_id = 'b89863b3ed3d';//
 var stoken = '425SmkIW0frUBGHjhzK1wiFaTo4el4SVddQHtNNKjY4=';
-var pdir_fid = '48732a9147e94bd68520dcc0caa40c96';
-var to_pdir_fid = '0bef6850c5bd488f8ca076134603734c';
+var pdir_fid = '48732a9147e94bd68520dcc0caa40c96';//下载目录
+var to_pdir_fid = '0bef6850c5bd488f8ca076134603734c';//下载到目录
+let page = 65;//总页数
 var list = [];
-for (let i = 1; i <= 65; i++) {
+for (let i = 1; i <= page; i++) {
   let t = Date.now();
   fetch("https://drive-h.quark.cn/1/clouddrive/share/sharepage/detail?pr=ucpro&fr=pc&uc_param_str=&pwd_id=" + pwd_id + "&stoken=" + encodeURIComponent(stoken) + "&pdir_fid=" + pdir_fid + "&force=0&_page=" + i +"&_size=50&_fetch_banner=0&_fetch_share=0&_fetch_total=1&_sort=file_type:asc,updated_at:desc&__dt=0&__t=" + t, {
     "headers": {
